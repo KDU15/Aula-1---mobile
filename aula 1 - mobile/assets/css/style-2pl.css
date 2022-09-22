@@ -14,7 +14,7 @@ body{
 }
 
 .content-2pl .pl1-bg{
-    background-image: url('https://s2.glbimg.com/DNV-GuMkN18nNUn3UPLGhkkPXOI=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/v/A/uDVHYsTeeSvA25avq2sg/tdrktochbnrrvrwywm1z.jpg');
+    background-image: url("/images/bg-pl/player1.webp");
     background-size: cover;
     background-position-x: center;
     height: 50%;
@@ -59,7 +59,7 @@ body{
 }
 
 .content-2pl .pl2-bg{
-    background-image: url('https://tecnoblog.net/wp-content/uploads/2021/03/magic-arena-ios.jpeg');
+    background-image: url("/images/bg-pl/player2.webp");
     background-size: cover;
     background-position-x: center;
     height: 50%;
