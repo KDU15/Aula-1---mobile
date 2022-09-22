@@ -12,29 +12,37 @@
     <div class="content-2pl">
         <div class="pl1-bg">
             <div class="pl1-content">
-                
+                <button id="Aumentar10Pl1" onclick="AumentarPl1()" class="botao-plus">+</button>
+                <span id="contador1" class="contador">0</span>
+                <button onclick="DiminuirPl1()" class="botao-less">-</button>
             </div>
         </div>
-        <div class="menu">
+        <div class="espaco-menu">
+            <div class="menu">
+                <button class="voltar">
+                    <img src="/images/icons/voltar.svg" alt="voltar">
+                </button>
+                <button class="config">
+                    <img onclick="iniciar()" src="/images/icons/config.svg" alt="config">
+                </button>
 
-            <button class="dice">
+                <div class="time">
+                    <span class="minutos">00</span>:<span class="segundos">00</span>
+                </div>
 
-            </button>
-
-
-            <div class="time">
-
-                x
+                <button class="mana">
+                    <img onclick="parar()" src="/images/icons/mana.svg" alt="mana">
+                </button>
+                <button class="dado">
+                    <img src="/images/icons/dado.svg" alt="dado">
+                </button>
             </div>
-            <button class="exit" >
-
-
-            </button>
-
         </div>
         <div class="pl2-bg">
             <div class="pl2-content">
-                
+                <button onclick="AumentarPl2()" class="botao-plus">+</button>
+                <span id="contador2" class="contador">0</span>
+                <button onclick="DiminuirPl2()" class="botao-less">-</button>
             </div>
         </div>
     </div>
@@ -47,4 +55,5 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://kit.fontawesome.com/e8389bc41e.js" crossorigin="anonymous"></script>
+    <script src="assets/js/js-prop.js" ></script>
 </html>
