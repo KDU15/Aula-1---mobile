@@ -44,7 +44,6 @@ function DiminuirPl2() {
 
 //Cronometro
 
-const miliseg = document.querySelector('.milissegundos')
 const seg = document.querySelector('.segundos')
 const min = document.querySelector('.minutos')
 
@@ -85,4 +84,15 @@ function iniciar() {
   function parar() {
     clearInterval(INTERVALO)
   }
+
+  function resetar() {
+    clearInterval(INTERVALO)
+    segNum = 0
+    minNum = 0
+    seg.innerHTML = '00'
+    min.innerHTML = '00'
+  }
   
+  function voltar() {
+    javascript:history.back();
+  }

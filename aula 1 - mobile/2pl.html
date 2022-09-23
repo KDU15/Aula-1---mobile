@@ -19,23 +19,23 @@
         </div>
         <div class="espaco-menu">
             <div class="menu">
-                <button class="voltar">
+                <div onclick="voltar()" class="voltar">
                     <img src="/images/icons/voltar.svg" alt="voltar">
-                </button>
-                <button class="config">
-                    <img onclick="iniciar()" src="/images/icons/config.svg" alt="config">
-                </button>
+                </div>
+                <div class="config">
+                    <img onclick="iniciar()" src="/images/icons/play.svg" alt="config">
+                </div>
 
-                <div class="time">
+                <div onclick="resetar()" class="time">
                     <span class="minutos">00</span>:<span class="segundos">00</span>
                 </div>
 
-                <button class="mana">
-                    <img onclick="parar()" src="/images/icons/mana.svg" alt="mana">
-                </button>
-                <button class="dado">
+                <div class="mana">
+                    <img onclick="parar()" src="/images/icons/pausa.svg" alt="mana">
+                </div>
+                <div class="dado">
                     <img src="/images/icons/dado.svg" alt="dado">
-                </button>
+                </div>
             </div>
         </div>
         <div class="pl2-bg">

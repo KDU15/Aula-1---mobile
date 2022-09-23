@@ -1130,7 +1130,7 @@ input, select, textarea {
 			height: 100%;
 		}
 
-		#bg:before {
+		/* #bg:before {
 			-moz-transition: background-color 2.5s ease-in-out;
 			-webkit-transition: background-color 2.5s ease-in-out;
 			-ms-transition: background-color 2.5s ease-in-out;
@@ -1147,26 +1147,42 @@ input, select, textarea {
 			background-repeat: no-repeat,
  repeat;
 			z-index: 2;
-		}
+		} */
 
 		#bg:after {
 			-moz-transform: scale(1.125);
 			-webkit-transform: scale(1.125);
 			-ms-transform: scale(1.125);
 			transform: scale(1.125);
-			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
-			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
-			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
-			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 			background-image: url("../../images/bg.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 1;
-			filter: blur(4px);
+			animation: blur forwards;
+			animation-duration: 5s;
+		}
+
+		@keyframes blur{
+			0%{
+				filter: blur(0px);
+			}
+			25%{
+				filter: blur(1px);
+			}
+			50%{
+				filter: blur(2px);
+			}
+			75%{
+				filter: blur(3px);
+			}
+			100%{
+				filter: blur(4px);
+			}
 		}
 
 		body.is-article-visible #bg:after {
+			transition: 5s;
 			-moz-transform: scale(1.0825);
 			-webkit-transform: scale(1.0825);
 			-ms-transform: scale(1.0825);
