@@ -6,15 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets\css\style-2pl.css">
+        
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 <body>
     <div class="content-2pl">
         <div class="pl1-bg">
             <div class="pl1-content">
-                <button id="Aumentar10Pl1" onclick="AumentarPl1()" class="botao-plus">+</button>
-                <span id="contador1" class="contador">0</span>
-                <button onclick="DiminuirPl1()" class="botao-less">-</button>
+                <button id="Aumentar10Pl1" onclick="AumentarPl1()" class="botao-plus-pl1">+</button>
+                <span id="contador1" class="contador-pl1">20</span>
+                <button id="Diminuir10Pl1" onclick="DiminuirPl1()" class="botao-less-pl1">-</button>
             </div>
         </div>
         <div class="espaco-menu">
@@ -26,29 +27,46 @@
                     <img onclick="iniciar()" src="/images/icons/play.svg" alt="config">
                 </div>
 
-                <div onclick="resetar()" class="time">
+                <div id="ResetarTempo" class="time">
                     <span class="minutos">00</span>:<span class="segundos">00</span>
                 </div>
 
                 <div class="mana">
                     <img onclick="parar()" src="/images/icons/pausa.svg" alt="mana">
                 </div>
-                <div class="dado">
+                <div onclick="rollD20()" class="dado">
                     <img src="/images/icons/dado.svg" alt="dado">
                 </div>
             </div>
         </div>
         <div class="pl2-bg">
             <div class="pl2-content">
-                <button onclick="AumentarPl2()" class="botao-plus">+</button>
-                <span id="contador2" class="contador">0</span>
-                <button onclick="DiminuirPl2()" class="botao-less">-</button>
+                <button id="Aumentar10Pl2" onclick="AumentarPl2()" class="botao-plus-pl2">+</button>
+                <span id="contador2" class="contador-pl2" >20</span>
+                <button id="Diminuir10Pl2" onclick="DiminuirPl2()" class="botao-less-pl2">-</button>
             </div>
         </div>
     </div>
+
+    <!-- Modal Dice  -->
+    <!-- #################################################### -->
+    <div id="d20modal" class="w3-modal" onclick="document.getElementById('d20modal').style.display='none'">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <img src="/images/icons/d20.svg" alt="">
+                <span id="d20Result"> </span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
     
 </body>
 
+    <script src="assets/js/dice.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>

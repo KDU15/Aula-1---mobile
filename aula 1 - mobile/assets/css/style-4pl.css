@@ -1,38 +1,73 @@
-html{
+html {
     display: flex;
     height: 100%;
 }
 
-body{
+body {
     width: 100%;
 }
 
-.content-2pl{
+.content-3pl {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.content-2pl .pl1-bg{
+.content-3pl .pl1-bg {
     background-image: url("/images/bg-pl/player1.webp");
     background-size: cover;
     background-position-x: center;
-    height: 50%;
-    width: 100%;
+    height: 100%;
+    width: 50%;
     display: flex;
+
 }
 
-.content-2pl .pl1-bg .pl1-content{
+.content-3pl .pl3-bg {
+    background-image: url("/images/bg-pl/player1.webp");
+    background-size: cover;
+    background-position-x: center;
+    height: 100%;
+    width: 50%;
+    display: flex;
+
+}
+
+.content-3pl .pl3-bg .pl3-content {
     display: flex;
     margin: 15px 15px 3em 15px;
     background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid white ;
+    border: 1px solid white;
     border-radius: 1px;
     width: 100%;
     backdrop-filter: blur(10px);
-   
+
 }
-.content-2pl .espaco-menu{
+
+
+.content-3pl .pl1-bg .pl1-content {
+    display: flex;
+    margin: 15px 15px 3em 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+    border-radius: 1px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+
+}
+
+.pl2_pl3 {
+
+    display: flex;
+    height: 50%;
+
+
+}
+
+
+
+
+.content-3pl .espaco-menu {
     position: absolute;
     height: 10%;
     width: 100%;
@@ -42,7 +77,7 @@ body{
     align-items: center;
 }
 
-.content-2pl .espaco-menu .menu{
+.content-3pl .espaco-menu .menu {
     width: 100%;
     height: 80%;
     display: flex;
@@ -55,13 +90,13 @@ body{
     border-radius: 40px;
 }
 
-.content-2pl .espaco-menu .menu div{
+.content-3pl .espaco-menu .menu div {
     box-shadow: none;
     display: flex;
     align-items: center;
 }
 
-.content-2pl .pl2-bg{
+.content-3pl .pl2-bg {
     background-image: url("/images/bg-pl/player2.webp");
     background-size: cover;
     background-position-x: center;
@@ -70,46 +105,47 @@ body{
     display: flex;
 }
 
-.content-2pl .pl2-bg .pl2-content{
+.content-3pl .pl2-bg .pl2-content {
     display: flex;
     margin: 3em 15px 15px 15px;
     background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid white ;
+    border: 1px solid white;
     border-radius: 1px;
     width: 100%;
     backdrop-filter: blur(10px);
-    
 }
 
-.contador-pl1{
-    margin: auto;
-    font-size: 5em;
-    font-weight: 900;
-    rotate: 180deg;
-}
-
-.contador-pl2{
+.contador {
     margin: auto;
     font-size: 5em;
     font-weight: 900;
 }
 
-.time{
+#contador1 {
+
+    rotate: 90deg;
+}
+
+#contador3 {
+
+    rotate: 270deg;
+}
+
+.time {
     font-size: 2em;
     opacity: .8;
 }
 
-.content-2pl .botao-plus-pl1{
+.content-3pl .botao-plus {
     font-size: 2.5em;
     box-shadow: none;
     width: 50%;
     height: 100%;
     padding-right: 30%;
     position: absolute;
-    left: 0;
 }
 
-.content-2pl .botao-less-pl1{
+.content-3pl .botao-less {
     font-size: 3em;
     box-shadow: none;
     width: 50%;
@@ -119,24 +155,27 @@ body{
     right: 0;
 }
 
-.content-2pl .botao-plus-pl2{
+.content-3pl .botao-plus-rotation {
     font-size: 2.5em;
     box-shadow: none;
-    width: 50%;
-    height: 100%;
-    padding-left: 30%;
+    width: 100%;
+    height: 50%;
+    padding: 30%;
+    top: 0;
     position: absolute;
-    right: 0;
 }
 
-.content-2pl .botao-less-pl2{
+.content-3pl .botao-less-rotation {
     font-size: 3em;
     box-shadow: none;
-    width: 50%;
-    height: 100%;
-    padding-right: 30%;
+    width: 100%;
+    height: 50%;
+    padding: 30%;
+    bottom: 0;
     position: absolute;
-    left: 0;
+    right: 0;
+    rotate: 90deg;
+
 }
 
 
@@ -154,30 +193,24 @@ body{
 }
 
 .w3-modal-content {
+    margin: auto;
     background-color: rgba(3, 3, 3, 0.404);
     position: relative;
+    padding: 0;
+    outline: 0;
     width: auto;
     margin: 80% 20%;
     border: 1px solid #fff;
     backdrop-filter: blur(4px);
 }
 
-.w3-container{
+.w3-container {
     display: flex;
-    flex-direction: column;
-    margin: 20% 0; 
-    justify-content: center;
-    align-items: center;
 }
 
-.w3-container img{
-    width: 20%;
-}
+.w3-modal-content span {
 
-.w3-modal-content span{
-    padding-top: 13%;
-    line-height: 70%;
-    margin: 0 auto;
+    margin: 0 0 auto auto;
     font-size: 5em;
     font-weight: 700;
 }

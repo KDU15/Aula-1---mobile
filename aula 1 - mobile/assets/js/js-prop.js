@@ -1,4 +1,4 @@
-var data = 0;
+var data = 20;
 document.getElementById("contador1").innerText = data;
 document.getElementById("contador2").innerText = data;
 
@@ -12,6 +12,7 @@ function DiminuirPl1() {
     data = data - 1;
     document.getElementById("contador1").innerText = data;
 }
+
 
 // CONTADOR DE 10 EM 10 PLAYER 1
 
@@ -31,6 +32,21 @@ function Adicionar10Pl1() {
     document.getElementById("contador1").innerText = data;
 }
 
+$( "#Diminuir10Pl1" ).on({
+  touchstart: function() {
+      $(this).data('timer', setTimeout(function() {
+            Diminuir10Pl1();
+      }, 1000));
+  },
+  touchend: function() {
+      clearTimeout( $(this).data('timer') );
+  }
+})
+
+function Diminuir10Pl1() {
+  data = data + 10;
+  document.getElementById("contador1").innerText = data;
+}
 
 // CONTADOR DE 1 EM 1 PLAYER 2
 function AumentarPl2() {
@@ -40,6 +56,40 @@ function AumentarPl2() {
 function DiminuirPl2() {
     data = data - 1;
     document.getElementById("contador2").innerText = data;
+}
+
+// CONTADOR DE 10 EM 10 PLAYER 2
+
+$( "#Aumentar10Pl2" ).on({
+  touchstart: function() {
+      $(this).data('timer', setTimeout(function() {
+            Adicionar10Pl2();
+      }, 1000));
+  },
+  touchend: function() {
+      clearTimeout( $(this).data('timer') );
+  }
+})
+
+function Adicionar10Pl2() {
+  data = data + 10;
+  document.getElementById("contador2").innerText = data;
+}
+
+$( "#Diminuir10Pl2" ).on({
+touchstart: function() {
+    $(this).data('timer', setTimeout(function() {
+          Diminuir10Pl1();
+    }, 1000));
+},
+touchend: function() {
+    clearTimeout( $(this).data('timer') );
+}
+})
+
+function Diminuir10Pl2() {
+data = data + 10;
+document.getElementById("contador2").innerText = data;
 }
 
 //Cronometro
@@ -84,6 +134,17 @@ function iniciar() {
   function parar() {
     clearInterval(INTERVALO)
   }
+
+  $( "#ResetarTempo" ).on({
+    touchstart: function() {
+        $(this).data('timer', setTimeout(function() {
+              resetar();
+        }, 1000));
+    },
+    touchend: function() {
+        clearTimeout( $(this).data('timer') );
+    }
+    })
 
   function resetar() {
     clearInterval(INTERVALO)

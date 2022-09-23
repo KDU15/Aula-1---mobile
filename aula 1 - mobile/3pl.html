@@ -1,12 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dimension by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets\css\style-3pl.css">
+
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 </head>
+
 <body>
     
+    <div class="content-3pl">
+        <div class="pl2_pl3">
+
+            <div class="pl1-bg">
+            
+            
+                <div class="pl1-content">
+                    <button id="Aumentar10Pl1" onclick="AumentarPl1()" class="botao-plus-rotation">+</button>
+                    <span id="contador1" class="contador">20</span>
+                    <button onclick="DiminuirPl1()" class="botao-less-rotation">-</button>
+                </div>
+            </div>
+            <div class="pl3-bg">
+            
+            
+                <div class="pl3-content">
+                    <button id="Aumentar10Pl3" onclick="AumentarPl3()" class="botao-plus-rotation">+</button>
+                    <span id="contador3" class="contador">20</span>
+                    <button id="Aumentar10Pl3" onclick="DiminuirPl3()" class="botao-less-rotation">-</button>
+                </div>
+            </div>
+
+        </div>
+            
+            
+        
+
+        <div class="espaco-menu">
+            <div class="menu">
+                <div onclick="voltar()" class="voltar">
+                    <img src="/images/icons/voltar.svg" alt="voltar">
+                </div>
+                <div class="config">
+                    <img onclick="iniciar()" src="/images/icons/play.svg" alt="config">
+                </div>
+
+                <div onclick="resetar()" class="time">
+                    <span class="minutos">00</span>:<span class="segundos">00</span>
+                </div>
+
+                <div class="mana">
+                    <img onclick="parar()" src="/images/icons/pausa.svg" alt="mana">
+                </div>
+                <div onclick="rollD20()" class="dado">
+                    <img src="/images/icons/dado.svg" alt="dado">
+                </div>
+            </div>
+        </div>
+        <div class="pl2-bg">
+            <div class="pl2-content">
+                <button onclick="AumentarPl2()" class="botao-plus">+</button>
+                <span id="contador2" class="contador">20</span>
+                <button onclick="DiminuirPl2()" class="botao-less">-</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Dice  -->
+    <!-- #################################################### -->
+    <div id="d20modal" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+                <span>
+                    <p id="d20Result"></p>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 </body>
+
+<script src="assets/js/dice.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://kit.fontawesome.com/e8389bc41e.js" crossorigin="anonymous"></script>
+<script src="assets/js/js-prop.js"></script>
+
 </html>
